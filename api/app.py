@@ -25,7 +25,7 @@ redisConnection=redis.StrictRedis(host=host, port=port)
 
 app = Flask(__name__)
 
-@app.route('/payment', methods=['POST'])
+@app.route('/payment')
 def payment():
     webhookPayloadJson=json.dumps(getPayment())
     redisConnection.publish('payments',webhookPayloadJson)

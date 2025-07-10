@@ -47,6 +47,6 @@ func SendWebhook(data any, url string, webhookId string) error {
 	if status == "failed" {
 		return errors.New(status)
 	}
-	
+
 	return nil
 }
